@@ -74,6 +74,10 @@
 ---
 
 ## Rules of Engagement
+0. **First-principles teaching law:** every concept starts with intuition in plain language
+   (physical/real-world analogy), then the formula is built element by element — every symbol
+   named, every operation justified ("why divide? why square?") — then worked by hand on paper,
+   and only then coded. Notation is never dropped on the learner unexplained.
 1. **From-scratch law:** no library until its core is built by hand and gated.
 2. **Mastery gates:** 3-tier exam (easy/med/hard), ≥80% incl. hard tier. Fail → remediate → new exam.
 3. **Daily loop:** briefing (plan with definitions of done) → work → debrief (scorecard, honest assessment, tomorrow's seeds).
