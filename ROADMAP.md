@@ -9,15 +9,15 @@
 ## Phases
 
 ### Phase 0 — Arming Up (Weeks 1–2) — ⏳ IN PROGRESS (started 2026-09-02)
-- [ ] Workspace + git repo initialized, daily commit habit begins
-- [ ] Git from scratch: init, add, commit, log, diff, branch, merge, remote, push/pull
-- [ ] GitHub account audit + SSH keys (local + VM)
-- [ ] Linux VM wired up: SSH access, VS Code Remote-SSH, git remote workflow
+- [x] Workspace + git repo initialized, daily commit habit begins (11 commits day 1)
+- [ ] Git from scratch — ch1 basics ✅ (zones, add/commit/log/diff/restore); branches/merge/graph pending (ch2)
+- [x] GitHub account audit + keys (private acct, HTTPS+GCM on work network; SSH key generated, parked for VM/home)
+- [ ] Linux VM wired up: SSH access ✅, nvidia-smi ✅; repo clone + two-machine workflow pending
 - [ ] Linux daily-driver basics: filesystem, navigation, files, permissions, man pages
 - [ ] Terminal fluency drills begin (daily, permanent)
-- [ ] Python + tooling installed and verified (local + VM), GPU verified (nvidia-smi, CUDA)
-- [ ] Anki installed, first deck created, daily review habit begins
-- [ ] Employer IP/moonlighting clause check
+- [x] Python + tooling verified (mean.py ran local); GPU verified: Tesla T4 16GB, CUDA 13.0
+- [x] Anki installed, first deck created (10 cards), first review cleared
+- [x] Employer IP/moonlighting clause check (user confirmed allowed — on record)
 - [ ] GATE 0: environment + git + Linux basics exam
 
 ### Phase 1 — Bedrock (Months 1–3): Math foundations + Python core
@@ -96,3 +96,4 @@
 | Date | Milestone |
 |------|-----------|
 | 2026-09-02 | Program approved. Workspace created. Phase 0 begins. |
+| 2026-09-02 | Day 1: 7/7 items. Repo live on private GitHub (HTTPS/GCM; corp firewall blocks SSH 22+443). T4 GPU verified. Bonus: Vol-02 ch1 (mean) — 6 paper exercises + first algebraic proof + mean.py from scratch (gated). Midnight quiz #1: 6.5/10 — re-drill: 1/n & pot translation, n·x̄ identity, add-dot sin. |
