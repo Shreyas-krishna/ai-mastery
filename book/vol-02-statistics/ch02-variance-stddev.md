@@ -6,6 +6,26 @@
 
 ---
 
+## Warm-up — story problems first (solve with plain arithmetic)
+
+Three problems, three *different* ideas. No formulas from this chapter yet.
+
+1. **The consistent batsman.** Batsman A scores 48, 52, 50 in three matches. Batsman B scores
+   0, 100, 50. Same mean — verify it. The team needs a *reliable* opener for the final. Who
+   do you pick, and what number-idea (not yet named) are you using to decide?
+2. **The salary bump.** Three workers earn ₹100, ₹150, ₹200 per day. The boss gives everyone
+   a flat ₹50 raise. Compute the gaps between the workers before and after. Did the raise
+   change how *unequal* they are?
+3. **The doubling.** Same three workers instead have their pay *doubled*: ₹200, ₹300, ₹400.
+   Now compute the gaps. What happened to the inequality — and how is this different from
+   the flat raise?
+
+Each is a section of this chapter in disguise: 1 is "same mean, different trust" (variance's
+reason to exist), 2 is "shifting data doesn't change spread," 3 is "scaling data scales
+spread." When the formulas arrive, connect each back to its story.
+
+---
+
 ## 1. The mean's blind spot — a problem you already discovered
 
 These are *your* datasets from the re-drill:
