@@ -90,6 +90,18 @@
 6. **Failure protocol:** miss a day → resume, no spiral. Miss 3+ → re-plan week. Fail gate twice → diagnose method.
 7. **Monthly retention re-exams** of all past material.
 8. **IP hygiene:** nothing from employer work in public artifacts.
+9. **Derivation law (added 2026-09-07):** formulas and algorithms are not handed over — they are
+   derived by the learner. The mentor supplies the problem, the intuition, and the *permitted
+   tools* (the exact prior results allowed); the learner works to the result. Every chapter
+   carries at least one "derive it yourself" problem, with a target honestly reachable from
+   the stated tools. Reveal only after genuine attempts, and always with a cold reproduction
+   owed the next day. Trains math, problem-solving, and critical thinking as one muscle.
+   *Ambush problems:* previously derived mechanisms (e.g. Newton iteration) are re-thrown
+   unannounced as fresh problem statements in later days — retention by surprise.
+10. **Radar Hour (added 2026-09-05):** Sunday, 60 min hard cap. Skim the AI landscape, log
+    3–5 bullets in `radar/` — *what it is, what it builds on*. Unknown foundations are logged as
+    "??? (Phase N)" and become a personal revisit list. Reconnaissance only, no rabbit holes.
+    Scales up with phases: papers skimmed in Phase 4, implemented in Phase 5.
 
 ## Infrastructure
 - Authoring: this folder (Windows), git repo
