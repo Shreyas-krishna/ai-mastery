@@ -10,8 +10,8 @@
 
 ## Warm-up — story problems (paper, 10 min, before reading)
 
-1. **The shared flat.** Three flatmates share a kitchen. Each has a locked bedroom. The
-   landlord holds a master key. Map these onto: your home directory, `/etc`, another user's
+1. **The shared flat.** Three flatmates share one flat: a common kitchen, and each person has
+   their own locked bedroom. The landlord holds a master key that opens every door. Map these onto: your home directory, `/etc`, another user's
    home, and "root". Who is the landlord? What is the master key?
 2. **The lending library.** A library book can be *read* by anyone, *written in* by nobody
    (except the librarian who stamps it), and *carried out* only by members. Three separate
