@@ -131,6 +131,19 @@ the habit.
 
 ## 5. Processes — what is running
 
+> **Tools borrowed from Chapter 6 (pipes & filters) — enough to use them today:**
+> - **`|` (pipe)** — sends the *output* of the left command into the *input* of the right one.
+>   `ps aux | head -5` = "list processes, then show me only the first 5 lines." Pipes chain:
+>   `a | b | c`. The full lesson (why this is the shell's superpower) is Chapter 6.
+> - **`grep <word>`** — prints only lines containing `<word>`. `ps aux | grep sleep` = "list
+>   processes, keep the lines that mention sleep." `-c` counts matches instead of printing.
+>   Gotcha: `grep sleep` also matches *its own* command line — you'll see a `grep sleep` row.
+> - **`ps aux`** — `ps` = process status. The letters are three separate flags in the old BSD
+>   style (no dash): `a` = all users' processes, `u` = user-oriented columns (owner, %CPU, %MEM),
+>   `x` = include processes with no terminal (daemons, background services). Memorize `aux`
+>   as one word; it's what everyone types.
+> - **`head -n`** / **`tail -n`** — first / last n lines (Chapter 4).
+
 A **process** is a running program: a PID (process ID), an owner, a parent, a state, and
 a share of CPU and memory. Everything on the machine — your shell, `ls`, Python, the GPU
 driver daemon — is a process. Your shell spawns a child process for every command you type.
@@ -204,21 +217,63 @@ set that.
    and `cat locked/inside.txt`. Decode what each error tells you about `r` vs `x` on a
    directory. Fix with the *minimum* permission change that lets you `cat` the file.
 
-**C. Processes**
-9. `ps aux | head -1` — read the column headers. Then `ps aux | grep -c .` — how many
-   processes are running? Then `ps aux --sort=-%mem | head -5` — what are the top memory
-   consumers on your VM? **Report.**
-10. `top`, then press `M`, watch for 10 seconds, press `q`. Then `nvidia-smi` — is anything
-    using the GPU right now?
-11. Run `sleep 300 &` — note the PID the shell prints. `jobs`. `ps aux | grep sleep` — find
-    it again; confirm the PID matches. `kill <PID>`. `jobs` again. **Report the sequence.**
-12. Run `sleep 300 &` again. This time `kill -9 <PID>`. Compare the message `jobs` shows
-    versus drill 11 — "Terminated" vs "Killed". One sentence on the difference.
-13. Run `python3 -c "while True: pass"` in the foreground. Open a **second** SSH session
-    (or a second terminal tab in VS Code). In it: `top` — find your Python at ~100% CPU.
-    Note its PID. `kill <PID>` from the second terminal. Watch the first terminal.
-    **Report what appeared there.**
-14. Cleanup: `rm -r ~/practice`. Covenant applies.
+**C. Processes** — record this whole section: run `script ~/practice/drills-C.log` first, and type `exit` when done.
+
+**Drill 9.** Read the column headers, count the processes, find the top memory consumers. **Report** the output of the last command. (The `-` before `%mem` means *descending*; without it you get the smallest.)
+
+```
+ps aux | head -1
+ps aux | grep -c .
+ps aux --sort=-%mem | head -5
+```
+
+**Drill 10.** Live view sorted by memory, then the GPU. Is anything using the GPU right now?
+
+```
+top            # press M to sort by memory, watch 10 s, press q
+nvidia-smi
+```
+
+**Drill 11.** Background a process, find it two ways, stop it politely. **Report the sequence** with output. (`%1` means "job number 1" — the shell's shortcut so you don't need the PID. `kill` is asynchronous, hence the one-second pause before checking.)
+
+```
+sleep 300 &
+jobs
+ps aux | grep sleep
+kill %1
+sleep 1; jobs
+```
+
+**Drill 12.** Same again, with the kernel's hammer. Compare what `jobs` prints versus drill 11 — one sentence on "Terminated" vs "Killed".
+
+```
+sleep 300 &
+kill -9 %1
+sleep 1; jobs
+```
+
+**Drill 13.** A runaway process, killed from outside. Two terminals.
+
+Terminal 1 (inside `script`):
+
+```
+python3 -c "while True: pass"
+```
+
+Terminal 2 (a second SSH session or a second VS Code terminal tab):
+
+```
+top            # find python3 at ~100% CPU, note its PID, press q
+kill <PID>
+```
+
+Watch terminal 1. **Report what appeared there.** Then `exit` the `script` recorder.
+
+**Drill 14.** Cleanup. Covenant applies.
+
+```
+rm -r ~/practice
+```
 
 **D. Proof of work** — paste the **Report** items (3, 4, 5, 7, 9, 11, 13) with their outputs.
 
