@@ -7,8 +7,8 @@ exercises, and gate exam results (linked to `exams/`).
 | Vol | Title | Status |
 |-----|-------|--------|
 | 00 | Tooling: Git, Linux, Terminal, Editors | ⏳ started |
-| 01 | Mathematics (arithmetic → calculus → optimization) | pending |
-| 02 | Probability & Statistics | pending |
+| 01 | Mathematics (arithmetic → calculus → optimization) | ⏳ Ch 0 probe written (2026-09-18); Ch 1+ after probe |
+| 02 | Probability & Statistics | ⏳ Ch 1–2 gated; Ch 3 paused pending Vol 01 floor |
 | 03 | Linear Algebra & Information Theory | pending |
 | 04 | Python: Core Language | pending |
 | 05 | Data Structures & Algorithms | pending |

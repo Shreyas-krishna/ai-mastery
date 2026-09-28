@@ -21,6 +21,11 @@
 - [ ] GATE 0: environment + git + Linux basics exam
 
 ### Phase 1 — Bedrock (Months 1–3): Math foundations + Python core
+- **Prerequisite (added 2026-09-18): Vol 01 Ch 0 Foundation Probe** — full-day, 16-strand,
+  picture-based diagnostic (counting → negatives → fractions → percent → multiplication as area →
+  units → exponents → order of ops → algebra → coordinates/slope → averages → estimation → word
+  problems → notation). Floor is set one level below the lowest weak strand; Ch 1+ of Vol 01 are
+  written from the strand map. Vol 02 Ch 3 is paused until a second probe is clean.
 - Math: arithmetic → algebra → functions → trig → precalculus → differential calculus
 - Python: syntax, control flow, data structures, functions, comprehensions, files, errors, regex
 - Daily: ~2h math, ~2.5h Python, ~1h Linux/git drills, ~0.5h Anki
@@ -102,6 +107,22 @@
     3–5 bullets in `radar/` — *what it is, what it builds on*. Unknown foundations are logged as
     "??? (Phase N)" and become a personal revisit list. Reconnaissance only, no rabbit holes.
     Scales up with phases: papers skimmed in Phase 4, implemented in Phase 5.
+11. **Picture-before-formula (added 2026-09-18):** every new operation or symbol gets a
+    "what does it *do*" picture before its formula. Sequence is fixed: mentor sketches →
+    learner redraws on graph paper → learner writes a tiny from-scratch Python script that
+    *prints* the picture → the formula, last. Drawn visuals beat viewed visuals. Proofs and
+    manipulation stay symbolic. Triggered by the 2026-09-18 finding that difference = distance
+    and multiplication = area were never internalised; the floor is measured by the Vol 01 Ch 0
+    probe, never assumed.
+12. **Recurring diagnostics (added 2026-09-18, learner's proposal):** the foundation probe is
+    not a one-off. Like a system health check it runs at boundaries, not on a calendar:
+    (a) *startup* — a short floor-setting probe at the top of every new volume, before its
+    chapters are written; (b) *phase gate* — a cold probe over everything covered so far,
+    fresh numbers, paper only, before any phase closes; (c) *fault* — whenever a "why" chain
+    hits floor mid-lesson, probe that neighbourhood immediately instead of waiting. Every run
+    produces a strand map in `exercises/<vol>/probe/`. The metric tracked across runs is not
+    % correct but the **false-knowledge count** (wrong at confidence 3); the goal is zero,
+    sustained. Supersedes the narrower Rule 7 monthly re-exams, which become the phase-gate run.
 
 ## Infrastructure
 - Authoring: this folder (Windows), git repo
